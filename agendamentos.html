@@ -50,7 +50,7 @@
             }
             .itensHeader:hover
             {
-                transform: scale(1.2);
+                transdiv: scale(1.2);
                 background-color: #53c89b;
                 cursor: pointer;
             }
@@ -233,13 +233,13 @@
                 border-radius: 25px;
                 background-color: #53c89b;
                 color: white;    
-                text-transform: uppercase;                            
+                text-transdiv: uppercase;                            
             }
 
             .btnPadrao:hover
             {
                 cursor: pointer;
-                transform: scale(1.2);
+                transdiv: scale(1.2);
             }
         /*****************************************************/
         /******************* Footer **************************/
@@ -330,21 +330,21 @@
             </div>
     </section>
     <main id="mainAgendamento">
-        <div id="containerAgendamento">
+        <form id="containerAgendamento">
             <div id="tituloEAgendamentos">
                 <h2 class="padraoAgendamento">Para realiza agendamentos é necessário possuir Agendamento</h2>
-                <input class="btnPadrao" type="button" value="meus agendamentos">
+                <input class="btnPadrao" type="submit" value="meus agendamentos">
             </div>
 
             <label class="padraoAgendamento">Especialidade:</label>
-            <form  class="preenchimentoMaior" action="">
+            <div  class="preenchimentoMaior" action="">
                 <select class="sectionPreenchimento" name="Sexo">
                     <option value=""></option>
                     <option value="">Fenino</option>
                     <option value="">Masculino</option>
                     <option value="">Outros</option>
                 </select>
-            </form>   
+            </div>   
 
             <label class="padraoAgendamento">Nome do Médico</label>
             <input class="preenchimentoMaior" type="text">
@@ -355,30 +355,30 @@
             <div class="multiPreenchimento">
                 <label class="padraoAgendamento preenchimentoMenorTexto">Data:</label>
                 <label class="padraoAgendamento preenchimentoMenorTexto">Horario:</label>
-                <form  class="preenchimentoMenor" action="">
+                <div  class="preenchimentoMenor" action="">
                     <select class="sectionPreenchimento" name="Sexo">
                         <option value=""></option>
                         <option value="">30/07/2024</option>
                         <option value="">30/07/2024</option>
                         <option value="">30/07/2024</option>
                     </select>
-                </form>                                             
-                <form  class="preenchimentoMenor" action="">
+                </div>                                             
+                <div  class="preenchimentoMenor" action="">
                     <select class="sectionPreenchimento" name="Sexo">
                         <option value=""></option>
                         <option value="">13:00</option>
                         <option value="">13:30</option>
                         <option value="">14:00</option>
                     </select>
-                </form>   
+                </div>   
             </div>
                         
             <div class="btnEnviarLimpar">
-                <input class="btnPadrao" type="button" value="cadastrar">
-                <input class="btnPadrao" type="button" value="limpar">
+                <input class="btnPadrao" type="submit" value="cadastrar">
+                <input class="btnPadrao" type="reset" value="limpar">
             </div>
             
-        </div>
+        </form>
     </main>
     <footer id="footerGeral">
         <div class="containerFooter">

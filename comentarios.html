@@ -50,7 +50,7 @@
             }
             .itensHeader:hover
             {
-                transform: scale(1.2);
+                transdiv: scale(1.2);
                 background-color: #53c89b;
                 cursor: pointer;
             }
@@ -229,7 +229,7 @@
                 border: 1px solid white;
             }
         /***********************************/
-            #formFiltro
+            #divFiltro
             {
                 display: flex;
                 align-items: center;
@@ -354,13 +354,13 @@
                 border-radius: 25px;
                 background-color: #53c89b;
                 color: white;    
-                text-transform: uppercase;                            
+                text-transdiv: uppercase;                            
             }
 
             .btnPadrao:hover
             {
                 cursor: pointer;
-                transform: scale(1.2);
+                transdiv: scale(1.2);
             }
         /*****************************************************/
         /******************* Footer **************************/
@@ -458,7 +458,7 @@
         <div id="filtroMain">            
                 <div class="containerFiltroConsultar">
                     <h5>Especialidade</h5>
-                    <form action="" id="formFiltro">
+                    <div action="" id="divFiltro">
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/estetoscopio.png" alt="estetoscópio">
                         <select class="filtros" id="especialidade" name="especialidades">
                             <option value="cardiologista">Cardiologista</option>
@@ -466,11 +466,11 @@
                             <option value="dermatologia">Dermatologia</option>
                             <option value="dastroenterologia">Gastroenterologia</option>
                         </select>
-                    </form>                    
+                    </div>                    
                 </div>
                 <div class="containerFiltroConsultar">
                     <h5>Localidade</h5>
-                    <form action="" id="formFiltro">
+                    <div action="" id="divFiltro">
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/localizacao.png" alt="estetoscópio">
                         <select class="filtros" id="localidade" name="localidade">
                             <option value="Acre">Acre (AC)</option>
@@ -501,11 +501,11 @@
                             <option value="Sergipe">Sergipe (SE)</option>
                             <option value="Tocantins">Tocantins (TO)</option>"
                         </select>
-                    </form>                    
+                    </div>                    
                 </div>
                 <div class="containerFiltroConsultar">
                     <h5>Médico</h5>
-                    <form action="" id="formFiltro">
+                    <div action="" id="divFiltro">
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/predio-do-hospital.png" alt="estetoscópio">
                         <select class="filtros" id="convenio" name="convenio">
                             <option value="fulano"></option>
@@ -514,7 +514,7 @@
                             <option value="fulano">Dr Fulano3</option>
                             <option value="fulano">Dr Fulano4</option>
                         </select>
-                    </form>                    
+                    </div>                    
                 </div>
         </div>
         <div id="resultadoBuscaMain">
@@ -579,17 +579,17 @@
                 </div>
             </div>
         </div>
-        <div id="adicionaComentario">
+        <form id="adicionaComentario">
             <hr id="separador">
             <h2>Adicionar Comentário (opção disponível apenas após a realização da consulta/exame)</h2>
             <input class="adicionarInfoComentario" type="text" placeholder="Adicione Especialidade">
             <input class="adicionarInfoComentario" type="text" placeholder="Adicione Nome do Médico">
             <textarea class="adicionarInfoComentario" id="textoTamanhoDinamico"></textarea>
             <div class="btnEnviarLimpar">
-                <input class="btnPadrao" type="button" value="Adicionar">
-                <input class="btnPadrao" type="button" value="limpar">
+                <input class="btnPadrao" type="submit" value="Adicionar">
+                <input class="btnPadrao" type="reset" value="limpar">
             </div>
-        </div>
+        </form>
     </main>
     <footer id="footerGeral">
         <div class="containerFooter">

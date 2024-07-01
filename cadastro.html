@@ -50,7 +50,7 @@
             }
             .itensHeader:hover
             {
-                transform: scale(1.2);
+                transdiv: scale(1.2);
                 background-color: #53c89b;
                 cursor: pointer;
             }
@@ -224,13 +224,13 @@
                 border-radius: 25px;
                 background-color: #53c89b;
                 color: white;    
-                text-transform: uppercase;                            
+                text-transdiv: uppercase;                            
             }
 
             .btnPadrao:hover
             {
                 cursor: pointer;
-                transform: scale(1.2);
+                transdiv: scale(1.2);
             }
         /*****************************************************/
         /******************* Footer **************************/
@@ -321,7 +321,7 @@
             </div>
     </section>
     <main id="mainCadastro">
-        <div id="containerCadastro">
+        <form action="" id="containerCadastro">
             <h2 class="padraoCadastro">Cadastre-se Aqui</h2>
 
             <label class="padraoCadastro">Nome Completo:</label>
@@ -338,14 +338,14 @@
                 <label class="padraoCadastro preenchimentoMenorTexto">Telefone:</label>                
                 <label class="padraoCadastro preenchimentoMenorTexto">Sexo:</label>
                 <input class="preenchimentoMenor" type="tel" name="telefone" placeholder="Ex: (ddd) 9 99999-9999">
-                <form  class="preenchimentoMenor" action="">
+                <div  class="preenchimentoMenor" action="">
                     <select class="sectionPreenchimento" name="Sexo">
                         <option value=""></option>
                         <option value="">Fenino</option>
                         <option value="">Masculino</option>
                         <option value="">Outros</option>
                     </select>
-                </form>    
+                </div>    
             </div>       
 
             <label class="padraoCadastro" >Endereço:</label>   
@@ -357,7 +357,7 @@
             <div class="multiPreenchimento">
                 <label class="padraoCadastro preenchimentoMenorTexto">Estado</label>
                 <label class="padraoCadastro preenchimentoMenorTexto">Cidade</label>
-                <form  class="preenchimentoMenor" action="">
+                <div  class="preenchimentoMenor" action="">
                     <select class="sectionPreenchimento" id="" name="localidade">
                         <option value="Acre"></option>
                         <option value="Acre">Acre (AC)</option>
@@ -388,18 +388,18 @@
                         <option value="Sergipe">Sergipe (SE)</option>
                         <option value="Tocantins">Tocantins (TO)</option>"
                     </select>
-                </form>                
+                </div>                
                 <input class="preenchimentoMenor" type="text" name="cidade" placeholder="Ex: Nossa Senhora do Socorro">
             </div>            
             <label class="padraoCadastro">E-mail</label>
             <input class="preenchimentoMaior" type="email" name="email" placeholder="Ex: teste@teste.com">
             
             <div class="btnEnviarLimpar">
-                <input class="btnPadrao" type="button" value="cadastrar">
-                <input class="btnPadrao" type="button" value="limpar">
+                <input class="btnPadrao" type="submit" value="cadastrar">
+                <input class="btnPadrao" type="reset" value="limpar">
             </div>
             
-        </div>
+        </form>
     </main>
     <footer id="footerGeral">
         <div class="containerFooter">
