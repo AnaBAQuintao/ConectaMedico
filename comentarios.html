@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/_Imagens/_Logo/logo.png" type="image/png">
+    <title>Conecta Médico</title>
+    <style>
+        /*********************Header*/
+            *{
+                margin: 0px;
+                padding: 0px;
+                
+            }
+
+            #cabecalho
+            {
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                height: 75px;
+                background-color: #156669;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            #logo
+            {
+                height: 75px;
+            }
+
+            #listaHeader
+            {
+                display: flex;
+                list-style: none;
+                margin : 10px;
+            }
+
+            .itensHeader
+            {
+                margin: 10px;
+                padding: 08px 15px;
+                background-color: #11263d;
+                color: white;
+                border-radius: 15px;
+                transition: .4s;
+            }
+            .itensHeader:hover
+            {
+                transform: scale(1.2);
+                background-color: #53c89b;
+                cursor: pointer;
+            }
+            #imgLogado
+            {
+                height: 50%;
+                width: 35px;
+                border-radius: 50%;
+                background-color: aquamarine;
+            }
+
+            #nmSite
+            {
+                color: white;
+                font-size: 20px;
+            }
+
+            #btnMobile
+            {
+                display: none;
+            }
+        /**************************************************/
+        /*****************section 1 Home******************/
+                
+            #secao1Geral
+            {   
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                height: 330px;
+                margin: 0 auto;
+                background-image: url(/_Imagens/_Section1Home/Home.png) ;
+                background-size: cover;
+            }
+
+            #containerSection1Home
+            {
+                position: absolute;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                height: 330px;
+                background-color: rgba(25,25,25);
+                opacity: .3;
+                z-index: 25;            
+            }
+
+            .secao1Containers
+            {
+                display: flex;
+                flex-direction: column;          
+                align-items: start;
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+                /*background-color: rgb(111, 114, 117);*/
+                /*border: 1px black solid; Sessão2 container */
+                z-index: 26;
+            }
+
+            #secao1Containers
+            {
+                text-align: left;
+            }
+
+            #h1ConsultarTexto1
+            {
+                padding-top: 60px;
+                margin-left: 50px;
+                text-align: left;
+                width: 95%;
+                position: relative;
+                font-size: 45px;
+                color: white;
+                z-index: 26;
+            }
+           
+        /*****************************************************/
+        /*******************  Main  **************************/
+            #principalConsultar
+            {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                margin: 0 auto;
+                max-width: 1400px;
+                min-width: 300px;
+                height: max-content;
+                background-color: #11263d;
+                
+            }            
+            #textoFiltros
+            {
+                display: flex;
+                align-items: start;
+                width: 100%;
+                max-width: 1000px;
+                min-width: 250px;
+            }
+            #filtroMain
+            {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                max-width: 1000px;
+                min-width: 250px;
+                height: 70px;
+                background-color: #53c89b;
+                border-radius: 25px;                
+            }
+
+            #resultadoBuscaMain
+            {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;                
+                align-items: center;
+                width: 100%;
+                max-width: 1000px;
+                min-width: 250px;
+                height: 307px;
+                /*background-color: #464b49;*/
+                border-radius: 25px; 
+                gap: 60px;
+                overflow-y: auto;
+            }
+        /***************Scroll**************/
+        /* Customizando a scrollbar para navegadores WebKit */
+            #resultadoBuscaMain::-webkit-scrollbar 
+            {
+                width: 12px; /* Largura da scrollbar */
+                height: 25%; /* Altura da scrollbar (para scroll horizontal) */
+                border-radius: 25px;
+            }
+            .filtros::-webkit-scrollbar 
+            {
+                width: 10px;
+                border-radius: 25px;                
+            }
+            
+
+            #resultadoBuscaMain::-webkit-scrollbar-track 
+            {
+                background:#53c89b;/* Cor do track da scrollbar */
+                border-radius: 15px;
+            }
+            .filtros::-webkit-scrollbar-track
+            {
+                border-radius: 15px;
+            }
+
+            #resultadoBuscaMain::-webkit-scrollbar-thumb
+            {
+                background: #2f4052;
+                border-radius: 15px;
+                border: 1px solid white;
+            }
+            #resultadoBuscaMain::-webkit-scrollbar-thumb:hover
+            {
+                background: #11263d;
+                border-radius: 15px;
+                border: 1px solid white;
+            }
+            .filtros::-webkit-scrollbar-thumb:hover
+            {
+                background:#11263d;
+                border-radius: 15px;
+                border: 1px solid white;
+            }
+        /***********************************/
+            #formFiltro
+            {
+                display: flex;
+                align-items: center;
+                background-color: white;
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+            .imgFiltro
+            {
+                width: 28px;
+                height: 28px;
+                background-color: white;
+            }
+            .filtros
+            {
+                border: none;
+                border-radius: 15px;
+                height: 40px;
+            }
+
+            .resBuscaContainer
+            {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: left;
+                align-items: inherit;
+                width: 100%;
+                max-width: 99%;
+                min-width: 300px;
+                height: 300px;
+                background-color:#53c89b;
+                border-radius: 25px;              
+            }
+            .imagemMedico
+            {
+                display: flex;
+                width:  140px;
+                height: 100px;
+            }
+            .nomeEspecialidadeMedico
+            {
+                color: white;
+                text-align: left;
+            }
+            .padraoResEspaco
+            {
+                margin-left: 15px;
+            }
+
+            .infoEspaco
+            {
+                width: 100%;
+                max-width: 90%;
+                min-width: 250px;
+            }
+            .usuario
+            {
+                font-size: 35px;
+                color: aliceblue;
+            }
+
+            #adicionaComentario
+            {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;                
+                align-items: start;
+                color: aliceblue;
+                width: 100%;
+                max-width: 1000px;
+                min-width: 250px;
+                height: max-content;
+                margin-bottom: 20px;
+                gap: 20px;
+            }
+            .adicionarInfoComentario
+            {
+                width: 100%;
+                background-color: #156669;
+                color:#f3f4f5;
+                border-radius: 25px;
+                font-size: 20px;
+                height: 30px;
+                
+            }
+            .adicionarInfoComentario::placeholder
+            {
+                margin-left: 15px;
+                color: white;
+            }
+            #textoTamanhoDinamico
+            {
+                width: 100%;
+                max-width: 100%;
+                min-width: 100%;
+                height: 150px;
+                max-height: 150px;
+                min-height: max-content;
+            }
+            #separador
+            {
+                width: 100%;
+            }
+            .btnEnviarLimpar
+            {
+                display: flex;
+                margin: 20px 0px; 
+                justify-content: center;
+                align-items: center;
+                width: 100%;   
+                gap: 15px;      
+                transition: .2;                      
+            }
+            .btnPadrao
+            {
+                width: 100%;
+                max-width: 170px;
+                min-width: max-content;
+                height: 30px;
+                border-radius: 25px;
+                background-color: #53c89b;
+                color: white;    
+                text-transform: uppercase;                            
+            }
+
+            .btnPadrao:hover
+            {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+        /*****************************************************/
+        /******************* Footer **************************/
+            #footerGeral
+            {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                height: 140px;
+                background-color:#156669
+            }
+            .containerFooter
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+                /*background-color: #53c89b;*/
+            }
+            #logoFooter
+            {
+                height: 90%;
+            }       
+            
+            .textFooter
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 95%;
+                color: white;
+            }
+
+            #footerCentro
+            {
+                display: flex;
+                justify-items: center;
+                text-align: center;
+            }
+
+            #footerDireita
+            {
+                display: flex;
+                align-items: end;
+            }
+
+            .footerDireitaParagrafos
+            {
+                margin-right: 15px
+            }
+        /******************************************/
+    </style>
+</head>
+<body>
+    <header id="cabecalho">        
+        <img id="logo" src="/_Imagens/_Logo/logo.png"> 
+        <label id="nmSite"> CONECTA MÉDICO</label>  
+        
+        <nav id="navegador">
+            <div id="btnMobile">
+            </div>
+            <ul id="listaHeader">
+                <a class="fade-out" href="index.html" target="_self"><li class="itensHeader">HOME</li></a>
+                <a class="fade-out" href="consultar.html" target="_self"><li class="itensHeader">CONSULTAR</li></a>
+                <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADATRAR</li></a>
+                <a class="fade-out" href="agendamentos.html" target="_self"><li class="itensHeader">AGENDAMENTO</li></a>
+                <a class="fade-out" href="comentarios.html" target="_self"><li class="itensHeader">COMENTÁRIOS</li></a>
+                <a class="fade-out" href="faleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
+            </ul>
+        </nav>
+
+        <div id="imgLogado">
+        </div>    
+        
+    </header>
+    <section id="secao1Geral">
+        <div id="containerSection1Home">
+            
+        </div>
+            <div id="secao1Containers" class="secao1Containers">
+                <h1 id="h1ConsultarTexto1">DEPOIMENTOS</h1>                
+            </div>
+    </section>
+    <main id="principalConsultar"> 
+        <div id="textoFiltros">
+            <h2 style="color: aliceblue;">Filtros</h2>    
+        </div>     
+        <div id="filtroMain">            
+                <div class="containerFiltroConsultar">
+                    <h5>Especialidade</h5>
+                    <form action="" id="formFiltro">
+                        <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/estetoscopio.png" alt="estetoscópio">
+                        <select class="filtros" id="especialidade" name="especialidades">
+                            <option value="cardiologista">Cardiologista</option>
+                            <option value="neurologista">Neurologista</option>
+                            <option value="dermatologia">Dermatologia</option>
+                            <option value="dastroenterologia">Gastroenterologia</option>
+                        </select>
+                    </form>                    
+                </div>
+                <div class="containerFiltroConsultar">
+                    <h5>Localidade</h5>
+                    <form action="" id="formFiltro">
+                        <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/localizacao.png" alt="estetoscópio">
+                        <select class="filtros" id="localidade" name="localidade">
+                            <option value="Acre">Acre (AC)</option>
+                            <option value="Alagoas">Alagoas (AL)</option>
+                            <option value="Amapa">Amapá (AP)</option>
+                            <option value="Amazonas">Amazonas (AM)</option>
+                            <option value="Bahia">Bahia (BA)</option>
+                            <option value="Ceara">Ceará (CE)</option>
+                            <option value="Distrito Federal">Distrito Federal (DF)</option>
+                            <option value="Espirito Santo">Espírito Santo (ES)</option>
+                            <option value="Goias">Goiás (GO)</option>
+                            <option value="Maranhao">Maranhão (MA)</option>
+                            <option value="Mato Grosso">Mato Grosso (MT)</option>
+                            <option value="Mato Grosso do Sul">Mato Grosso do Sul (MS)</option>
+                            <option value="Minas Gerais">Minas Gerais (MG)</option>
+                            <option value="Para">Pará (PA)</option>
+                            <option value="Paraiba">Paraíba (PB)</option>
+                            <option value="Parana">Paraná (PR)</option>
+                            <option value="Pernambuco">Pernambuco (PE)</option>
+                            <option value="Piaui">Piauí (PI)</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro (RJ)</option>
+                            <option value="Rio Grande do Norte">Rio Grande do Norte (RN)</option>
+                            <option value="Rio Grande do Sul">Rio Grande do Sul (RS)</option>
+                            <option value="Rondônia">Rondônia (RO)</option>
+                            <option value="Roraima">Roraima (RR)</option>
+                            <option value="Santa Catarina">Santa Catarina (SC)</option>
+                            <option value="São Paulo">São Paulo (SP)</option>
+                            <option value="Sergipe">Sergipe (SE)</option>
+                            <option value="Tocantins">Tocantins (TO)</option>"
+                        </select>
+                    </form>                    
+                </div>
+                <div class="containerFiltroConsultar">
+                    <h5>Médico</h5>
+                    <form action="" id="formFiltro">
+                        <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/predio-do-hospital.png" alt="estetoscópio">
+                        <select class="filtros" id="convenio" name="convenio">
+                            <option value="fulano"></option>
+                            <option value="fulano">Dr Fulano1</option>
+                            <option value="fulano">Dr Fulano2</option>
+                            <option value="fulano">Dr Fulano3</option>
+                            <option value="fulano">Dr Fulano4</option>
+                        </select>
+                    </form>                    
+                </div>
+        </div>
+        <div id="resultadoBuscaMain">
+            <div class="resBuscaContainer">
+                <div class="padraoResEspaco infoEspaco usuario">
+                    <h2>@UserName</h2>
+                </div>
+                <div class="imagemMedico padraoResEspaco">
+                    <img src="/_Imagens/_MedicosBusca/medico-e-enfermeiras-em-equipamentos-especiais_23-2148980721.png" alt="imagem do Médico">
+                </div>
+                <div class="padraoResEspaco">
+                    <h2 class="nomeEspecialidadeMedico">Dr. Fulano</h2>
+                    <p  class="nomeEspecialidadeMedico">(especialidade)</p>
+                </div>
+                <div class="padraoResEspaco infoEspaco">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis et, exercitationem beatae dignissimos natus ut iusto perspiciatis suscipit quo provident! Tenetur quasi vel voluptas natus. Illum modi veritatis natus.
+                </div>
+            </div>
+            <div class="resBuscaContainer">
+                <div class="padraoResEspaco infoEspaco usuario">
+                    <h2>@UserName</h2>
+                </div>
+                <div class="imagemMedico padraoResEspaco">
+                    <img src="/_Imagens/_MedicosBusca/medico-e-enfermeiras-em-equipamentos-especiais_23-2148980721.png" alt="imagem do Médico">
+                </div>
+                <div class="padraoResEspaco">
+                    <h2 class="nomeEspecialidadeMedico">Dr. Fulano</h2>
+                    <p  class="nomeEspecialidadeMedico">(especialidade)</p>
+                </div>
+                <div class="padraoResEspaco infoEspaco">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis et, exercitationem beatae dignissimos natus ut iusto perspiciatis suscipit quo provident! Tenetur quasi vel voluptas natus. Illum modi veritatis natus.
+                </div>
+            </div>
+            <div class="resBuscaContainer">
+                <div class="padraoResEspaco infoEspaco usuario">
+                    <h2>@UserName</h2>
+                </div>
+                <div class="imagemMedico padraoResEspaco">
+                    <img src="/_Imagens/_MedicosBusca/medico-e-enfermeiras-em-equipamentos-especiais_23-2148980721.png" alt="imagem do Médico">
+                </div>
+                <div class="padraoResEspaco">
+                    <h2 class="nomeEspecialidadeMedico">Dr. Fulano</h2>
+                    <p  class="nomeEspecialidadeMedico">(especialidade)</p>
+                </div>
+                <div class="padraoResEspaco infoEspaco">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis et, exercitationem beatae dignissimos natus ut iusto perspiciatis suscipit quo provident! Tenetur quasi vel voluptas natus. Illum modi veritatis natus.
+                </div>
+            </div>
+            <div class="resBuscaContainer">
+                <div class="padraoResEspaco infoEspaco usuario">
+                    <h2>@UserName</h2>
+                </div>
+                <div class="imagemMedico padraoResEspaco">
+                    <img src="/_Imagens/_MedicosBusca/medico-e-enfermeiras-em-equipamentos-especiais_23-2148980721.png" alt="imagem do Médico">
+                </div>
+                <div class="padraoResEspaco">
+                    <h2 class="nomeEspecialidadeMedico">Dr. Fulano</h2>
+                    <p  class="nomeEspecialidadeMedico">(especialidade)</p>
+                </div>
+                <div class="padraoResEspaco infoEspaco">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis et, exercitationem beatae dignissimos natus ut iusto perspiciatis suscipit quo provident! Tenetur quasi vel voluptas natus. Illum modi veritatis natus.
+                </div>
+            </div>
+        </div>
+        <div id="adicionaComentario">
+            <hr id="separador">
+            <h2>Adicionar Comentário (opção disponível apenas após a realização da consulta/exame)</h2>
+            <input class="adicionarInfoComentario" type="text" placeholder="Adicione Especialidade">
+            <input class="adicionarInfoComentario" type="text" placeholder="Adicione Nome do Médico">
+            <textarea class="adicionarInfoComentario" id="textoTamanhoDinamico"></textarea>
+            <div class="btnEnviarLimpar">
+                <input class="btnPadrao" type="button" value="Adicionar">
+                <input class="btnPadrao" type="button" value="limpar">
+            </div>
+        </div>
+    </main>
+    <footer id="footerGeral">
+        <div class="containerFooter">
+            <div>
+                <img id="logoFooter" src="/_Imagens/_Logo/logo.png" alt="logoEmpresa">
+            </div>
+            <div class="textFooter">
+                <p>CNPJ: 00.000.000/0001-11</p>
+                <P>Rod. XX , Estado - MG</P>
+                <P>Tel: (31) 0000-0000</P>
+            </div>
+        </div>
+        <div class="containerFooter textFooter" id="footerCentro">
+            <p>Redes Sociais</p>
+            <p>@Conectamedico</p>
+        </div>
+        <div class="containerFooter textFooter" id="footerDireita">
+            <p class="footerDireitaParagrafos">Política de Privacidade</p>
+            <p class="footerDireitaParagrafos">© 2024 CONECTA MEDICO</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

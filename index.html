@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/_Imagens/_Logo/logo.png" type="logo/png">
+    <title>Conecta Médico</title>
+    <style>
+        /*********************Header*/
+            *{
+                margin: 0px;
+                padding: 0px;                
+            }
+
+            #cabecalho
+            {
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                height: 75px;
+                background-color: #156669;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            #logo
+            {
+                height: 75px;
+            }
+
+            #listaHeader
+            {
+                display: flex;
+                list-style: none;
+                margin : 10px;
+            }
+
+            .itensHeader
+            {
+                margin: 10px;
+                padding: 08px 15px;
+                background-color: #11263d;
+                color: white;
+                border-radius: 15px;
+                transition: .4s;
+            }
+            .itensHeader:hover
+            {
+                transform: scale(1.2);
+                background-color: #53c89b;
+                cursor: pointer;
+            }
+            #imgLogado
+            {
+                height: 50%;
+                width: 35px;
+                border-radius: 50%;
+                background-color: aquamarine;
+            }
+
+            #nmSite
+            {
+                color: white;
+                font-size: 20px;
+            }
+
+            #btnMobile
+            {
+                display: none;
+            }
+        /**************************************************/
+        /*****************section 1 Home******************/
+                
+            #secao1Home
+            {   
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                height: 600px;
+                margin: 0 auto;
+                background-image: url(/_Imagens/_Section1Home/Home.png) ;
+                background-size: cover;
+            }
+
+            #containerSection1Home
+            {
+                position: absolute;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                height: 600px;
+                background-color: rgba(25,25,25);
+                opacity: .3;
+                z-index: 25;            
+            }
+
+            .secao1Containers
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 45%;
+                min-width: 300px;
+                height: 100%;
+                /*background-color: rgb(111, 114, 117);*/
+                /*border: 1px black solid; Sessão2 container */
+                z-index: 26;
+            }
+
+            #secao1Containers
+            {
+                text-align: left;
+            }
+
+            #h1HomeTexto1
+            {
+                padding-top: 60px;
+                text-align: left;
+                width: 95%;
+                position: relative;
+                font-size: 45px;
+                color: white;
+                z-index: 26;
+            }
+
+            #textoDescitivoHome
+            {
+                width: 92%;
+                text-align: left;
+                margin-top: 22px;
+                padding-bottom: 30%;
+                position: relative;
+                font-size: 27px;
+                color: white;
+                z-index: 26;
+            }
+
+            #loginSection1Home
+            {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                background-color: rgba(256, 256, 256, .39);
+                border-radius: 25px;
+                height: 150px;
+                padding: 3px;
+                margin: 15px;
+            }
+
+            .loginUserPass
+            {
+                border-radius: 25px;
+                text-align: center;
+                background-color: #53c89b;
+                color: rgb(18, 16, 16);
+                text-transform: uppercase;
+                border-color: #11263d;            
+            }
+
+            .listaCadastro1
+            {
+                margin: 7px;
+            }
+            .loginUserPass::placeholder
+            {
+                color: white;                
+            }
+
+            #btnLogin,#btnSenha
+            {
+                background-color: #11263d;
+                border-radius: 25px;
+                text-align: center;
+            }
+
+            #secao2Container2
+            {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: space-between;
+                align-items: flex-end;
+                text-align: center;
+                color: white;
+            }
+            #h2Secao2Container2
+            {
+                margin-right: 95px;
+                font-size: 45px;
+                color: white;
+            }
+        /*****************************************************/
+        /******************  Main  *********************/
+            #principalHome
+            {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                max-height: max-content;
+                background-color: #11263d;
+            }
+
+            #mensagemPrincipalHome
+            {
+                width: 100%;
+                max-width: 80%;
+                min-width: 300px;
+                max-height: max-content;
+                margin: 20px 20px;
+                color: white;
+                font-size: 25px;
+                text-align: right;
+            }
+
+            #descServicosHome
+            {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 80%;
+                min-width: 300px;
+                max-height: max-content;
+                font-size: 25px;
+            /* background-color: #53c89b;*/
+                gap: 71px;
+                margin-bottom: 75px;
+            }
+            .padraoMainInfoHome
+            {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                height: 300px;
+                gap: 10px;
+
+            }
+            .informativoHome1
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 70px;
+                background-color: white;
+                border-radius: 15px;
+                font-size: 25px;
+            }
+            .informativoHome2
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color:#156669;
+                color: white;
+                border-radius: 15px;
+                font-size: 20px;
+                text-align: center;
+            }
+            .info2Home
+            {
+                margin: 0px 15px;
+            }
+        /******************* Footer **************************/
+            #footerGeral
+            {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 1400px;
+                min-width: 300px;
+                height: 140px;
+                background-color:#156669
+            }
+            .containerFooter
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+                /*background-color: #53c89b;*/
+            }
+            #logoFooter
+            {
+                height: 90%;
+            }       
+            
+            .textFooter
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 95%;
+                color: white;
+            }
+
+            #footerCentro
+            {
+                display: flex;
+                justify-items: center;
+                text-align: center;
+            }
+
+            #footerDireita
+            {
+                display: flex;
+                align-items: end;
+            }
+
+            .footerDireitaParagrafos
+            {
+                margin-right: 15px
+            }
+        /******************************************/
+    </style>
+
+    
+</head>
+<body>
+    <header id="cabecalho">        
+        <img id="logo" src="/_Imagens/_Logo/logo.png"> 
+        <label id="nmSite"> CONECTA MÉDICO</label>  
+        
+        <nav id="navegador">
+
+            <div id="btnMobile">
+
+            </div>
+
+            <ul id="listaHeader">
+                <a class="fade-out" href="index.html" target="_self"><li class="itensHeader">HOME</li></a>
+                <a class="fade-out" href="consultar.html" target="_self"><li class="itensHeader">CONSULTAR</li></a>
+                <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADATRAR</li></a>
+                <a class="fade-out" href="agendamentos.html" target="_self"><li class="itensHeader">AGENDAMENTO</li></a>
+                <a class="fade-out" href="comentarios.html" target="_self"><li class="itensHeader">COMENTÁRIOS</li></a>
+                <li class="itensHeader">FALE CONOSCO</li>
+            </ul>
+        </nav>
+
+        <div id="imgLogado">
+        </div>    
+        
+    </header>
+    <section id="secao1Home">
+        <div id="containerSection1Home">
+            
+        </div>
+            <div id="secao1Containers" class="secao1Containers">
+                <h1 id="h1HomeTexto1">Econtre Especialistas Para sua Doença</h1>
+                <p id="textoDescitivoHome">Se você está em busca de profissionais altamente qualificados 
+                    para tratar uma condição específica, o ConectaMedico é o seu guia confiável.
+                </p>
+            </div>
+            <div id="secao2Container2" class="secao1Containers" >
+                <div id="loginSection1Home">
+                    <div class="listaCadastro1">
+                        <input class="loginUserPass" type="text" placeholder="USUÁRIO"  name="USUÁRIO">
+                    </div>
+                    <div class="listaCadastro1">
+                        <input class="loginUserPass" type="password" placeholder="SENHA" name="SENHA">
+                    </div>
+                    <div id="btnLogin" class="listaCadastro1">Login</div>
+                    <div id="btnSenha" class="listaCadastro1">Senha</div>
+                </div>
+                <h2 id="h2Secao2Container2">Como Funciona?</h2>
+            </div>
+    </section>
+    <main id="principalHome">
+        <div id="mensagemPrincipalHome">
+            <p>Nossa missão é conectar pacientes a especialistas médicos experientes,
+               proporcionando orientação personalizada e cuidados excepcionais..
+               Veja abaixo o passo a passo</p>
+        </div>
+        <div id="descServicosHome">
+            <div class="padraoMainInfoHome">
+                <div class="informativoHome1">
+                    <h5>1 - Pesquisa Personalizada</h5>
+                </div>
+                <div class="informativoHome2">
+                    <p class="info2Home">
+                        Digite o nome da sua doença ou condição na barra de pesquisa.</br>
+                    Nosso sistema inteligente identificará os especialistas mais
+                       adequados com base nas suas necessidades.
+                    </p>
+                </div>
+            </div>
+            <div class="padraoMainInfoHome">
+                <div class="informativoHome1">
+                    <h5>2 - Perfil dos Especialistas</h5>
+                </div>
+                <div class="informativoHome2">
+                    <p class="info2Home">
+                        Explore os perfis detalhados dos médicos.<br>
+                        Saiba sobre suas especialidades, experiência, áreas de atuação e avaliações de pacientes anteriores.
+                    </p>
+                </div>
+            </div>
+            <div class="padraoMainInfoHome">
+                <div class="informativoHome1">
+                    <h5>3 - Agendamento Simples</h5>
+                </div>
+                <div class="informativoHome2" >
+                    <p class="info2Home">
+                        Marque consultas online diretamente pelo nosso site.<br>
+                        Escolha datas e horários convenientes para você.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footerGeral">
+        <div class="containerFooter">
+            <div>
+                <img id="logoFooter" src="/_Imagens/_Logo/logo.png" alt="logoEmpresa">
+            </div>
+            <div class="textFooter">
+                <p>CNPJ: 00.000.000/0001-11</p>
+                <P>Rod. XX , Estado - MG</P>
+                <P>Tel: (31) 0000-0000</P>
+            </div>
+        </div>
+        <div class="containerFooter textFooter" id="footerCentro">
+            <p>Redes Sociais</p>
+            <p>@Conectamedico</p>
+        </div>
+        <div class="containerFooter textFooter" id="footerDireita">
+            <p class="footerDireitaParagrafos">Política de Privacidade</p>
+            <p class="footerDireitaParagrafos">© 2024 CONECTA MEDICO</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
