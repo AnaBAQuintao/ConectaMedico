@@ -89,7 +89,7 @@
                 background-size: cover;
             }
 
-            #containerSection1Home
+            #containerSection1Geral
             {
                 position: absolute;
                 width: 100%;
@@ -117,12 +117,12 @@
                 z-index: 26;
             }
 
-            #secao1Containers
+            #padaoAlinhamentoSessao1
             {
                 text-align: left;
             }
 
-            #h1HomeTexto1
+            #h2HomeTexto2
             {
                 padding-top: 60px;
                 text-align: left;
@@ -164,12 +164,19 @@
                 background-color: #53c89b;
                 color: rgb(18, 16, 16);
                 text-transform: uppercase;
+                padding: 3px;
                 border-color: #11263d;            
             }
 
             .listaCadastro1
             {
+                padding: 3px;
                 margin: 7px;
+                color: aliceblue;
+            }
+            .listaCadastro1::placeholder
+            {
+                color: white;
             }
             .loginUserPass::placeholder
             {
@@ -181,9 +188,21 @@
                 background-color: #11263d;
                 border-radius: 25px;
                 text-align: center;
+                transition: .5s;
             }
 
-            #secao2Container2
+            #btnLogin:hover
+            {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+            #btnSenha:hover
+            {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+
+            #padaoFormularioSessao1
             {
                 display: flex;
                 width: 100%;
@@ -337,64 +356,67 @@
             }
         /******************************************/
     </style>
-
-    
+  
 </head>
 <body>
+    <!-- Cabeçalho padrão-->
     <header id="cabecalho">        
         <img id="logo" src="/_Imagens/_Logo/logo.png"> 
-        <label id="nmSite"> CONECTA MÉDICO</label>  
-        
+        <h1 id="nmSite"> CONECTA MÉDICO</h1>  
+        <!-- Navegador do Site-->
         <nav id="navegador">
-
             <div id="btnMobile">
-
             </div>
-
             <ul id="listaHeader">
                 <a class="fade-out" href="index.html" target="_self"><li class="itensHeader">HOME</li></a>
                 <a class="fade-out" href="consultar.html" target="_self"><li class="itensHeader">CONSULTAR</li></a>
                 <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADATRAR</li></a>
                 <a class="fade-out" href="agendamentos.html" target="_self"><li class="itensHeader">AGENDAMENTO</li></a>
                 <a class="fade-out" href="comentarios.html" target="_self"><li class="itensHeader">COMENTÁRIOS</li></a>
-                <li class="itensHeader">FALE CONOSCO</li>
+                <a class="fade-out" href="FaleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
             </ul>
         </nav>
-
+        <!-- Futuramente irá conter imagem do usuário logado-->
         <div id="imgLogado">
-        </div>    
-        
+        </div>        
     </header>
+    <!-- Sessão 1 para página principal -->
     <section id="secao1Home">
-        <div id="containerSection1Home">
-            
+        <!-- Imagem de Fundo da Sessão 1-->
+        <div id="containerSection1Geral">            
         </div>
-            <div id="secao1Containers" class="secao1Containers">
-                <h1 id="h1HomeTexto1">Econtre Especialistas Para sua Doença</h1>
+            <!-- Textos Principais da sessão 1-->
+            <div id="padaoAlinhamentoSessao1" class="secao1Containers">
+                <h2 id="h2HomeTexto2">Encontre Especialistas Para seu Caso</h2>
                 <p id="textoDescitivoHome">Se você está em busca de profissionais altamente qualificados 
                     para tratar uma condição específica, o ConectaMedico é o seu guia confiável.
                 </p>
             </div>
-            <div id="secao2Container2" class="secao1Containers" >
-                <div id="loginSection1Home">
+            <!-- Login/cadastro sessão 1-->
+            <div id="padaoFormularioSessao1" class="secao1Containers" >
+                <form id="loginSection1Home">
                     <div class="listaCadastro1">
                         <input class="loginUserPass" type="text" placeholder="USUÁRIO"  name="USUÁRIO">
                     </div>
                     <div class="listaCadastro1">
                         <input class="loginUserPass" type="password" placeholder="SENHA" name="SENHA">
                     </div>
-                    <div id="btnLogin" class="listaCadastro1">Login</div>
-                    <div id="btnSenha" class="listaCadastro1">Senha</div>
-                </div>
+                    <input type="submit" id="btnLogin" class="listaCadastro1" value="LOGIN">
+                    <input type="submit" id="btnSenha" class="listaCadastro1" value="CADASTRAR">
+                </form>
                 <h2 id="h2Secao2Container2">Como Funciona?</h2>
             </div>
     </section>
+    <!-- Informações principais -->
     <main id="principalHome">
+        <!-- Informativo principal do produto -->
         <div id="mensagemPrincipalHome">
             <p>Nossa missão é conectar pacientes a especialistas médicos experientes,
                proporcionando orientação personalizada e cuidados excepcionais..
                Veja abaixo o passo a passo</p>
         </div>
+        <!-- Separação por caixas aplicando Flex Box. Explicações de serviços-->
+         <!-- Containers -->
         <div id="descServicosHome">
             <div class="padraoMainInfoHome">
                 <div class="informativoHome1">
@@ -432,7 +454,9 @@
             </div>
         </div>
     </main>
+    <!-- Rodapé padrão-->
     <footer id="footerGeral">
+        <!-- Separação de informações do Rodapé padrão -->
         <div class="containerFooter">
             <div>
                 <img id="logoFooter" src="/_Imagens/_Logo/logo.png" alt="logoEmpresa">

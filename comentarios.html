@@ -90,7 +90,7 @@
                 background-size: cover;
             }
 
-            #containerSection1Home
+            #containerSection1Geral
             {
                 position: absolute;
                 width: 100%;
@@ -422,10 +422,11 @@
     </style>
 </head>
 <body>
+    <!-- Cabeçalho padrão-->
     <header id="cabecalho">        
         <img id="logo" src="/_Imagens/_Logo/logo.png"> 
-        <label id="nmSite"> CONECTA MÉDICO</label>  
-        
+        <h1 id="nmSite"> CONECTA MÉDICO</h1>  
+        <!-- Navegador do Site-->
         <nav id="navegador">
             <div id="btnMobile">
             </div>
@@ -435,30 +436,37 @@
                 <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADATRAR</li></a>
                 <a class="fade-out" href="agendamentos.html" target="_self"><li class="itensHeader">AGENDAMENTO</li></a>
                 <a class="fade-out" href="comentarios.html" target="_self"><li class="itensHeader">COMENTÁRIOS</li></a>
-                <a class="fade-out" href="faleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
+                <a class="fade-out" href="FaleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
             </ul>
         </nav>
-
+        <!-- Futuramente irá conter imagem do usuário logado-->
         <div id="imgLogado">
-        </div>    
-        
+        </div>        
     </header>
+    <!-- Sessão 1 para página principal -->
     <section id="secao1Geral">
-        <div id="containerSection1Home">
-            
+        <!-- Imagem de Fundo da Sessão 1-->
+        <div id="containerSection1Geral">            
         </div>
+        <!-- Textos Principais da sessão 1-->
             <div id="secao1Containers" class="secao1Containers">
                 <h1 id="h1ConsultarTexto1">DEPOIMENTOS</h1>                
             </div>
     </section>
+    <!-- Informações principais -->
     <main id="principalConsultar"> 
         <div id="textoFiltros">
             <h2 style="color: aliceblue;">Filtros</h2>    
         </div>     
-        <div id="filtroMain">            
+        <!-- Formulário de filtragem de informações genéricas -->
+        <form action="" id="filtroMain"> 
+            <!-- Opções de Filtragem -->          
+                <!-- Filtro 1 -->           
                 <div class="containerFiltroConsultar">
-                    <h5>Especialidade</h5>
-                    <div action="" id="divFiltro">
+                    <!-- descreve opção -->
+                    <label>Especialidade</label>                    
+                    <div id="divFiltro">
+                        <!-- Imagem lateral ilustrando opção -->
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/estetoscopio.png" alt="estetoscópio">
                         <select class="filtros" id="especialidade" name="especialidades">
                             <option value="cardiologista">Cardiologista</option>
@@ -467,10 +475,11 @@
                             <option value="dastroenterologia">Gastroenterologia</option>
                         </select>
                     </div>                    
-                </div>
+                </div>      
+                <!-- Filtro 2 -->
                 <div class="containerFiltroConsultar">
-                    <h5>Localidade</h5>
-                    <div action="" id="divFiltro">
+                    <label>Localidade</label>
+                    <div id="divFiltro">
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/localizacao.png" alt="estetoscópio">
                         <select class="filtros" id="localidade" name="localidade">
                             <option value="Acre">Acre (AC)</option>
@@ -502,10 +511,11 @@
                             <option value="Tocantins">Tocantins (TO)</option>"
                         </select>
                     </div>                    
-                </div>
+                </div>          
+                <!-- Filtro 3 -->
                 <div class="containerFiltroConsultar">
-                    <h5>Médico</h5>
-                    <div action="" id="divFiltro">
+                    <label>Médico</label>
+                    <div id="divFiltro">
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/predio-do-hospital.png" alt="estetoscópio">
                         <select class="filtros" id="convenio" name="convenio">
                             <option value="fulano"></option>
@@ -516,8 +526,11 @@
                         </select>
                     </div>                    
                 </div>
-        </div>
+            </form>
+        <!-- Exibe as informações de acordo com o que foi aplicado nos filtros de busca OBS: as informações devem aoarecer de forma assíncrona  -->
+        <!-- Container limitador de espaço Geral-->    
         <div id="resultadoBuscaMain">
+            <!-- Informções publicas sobre Experiências dos pacientes -->
             <div class="resBuscaContainer">
                 <div class="padraoResEspaco infoEspaco usuario">
                     <h2>@UserName</h2>
@@ -579,7 +592,8 @@
                 </div>
             </div>
         </div>
-        <form id="adicionaComentario">
+        <!-- Formulario feito para o envio de experiencia de consulta-->
+        <form action="" id="adicionaComentario">
             <hr id="separador">
             <h2>Adicionar Comentário (opção disponível apenas após a realização da consulta/exame)</h2>
             <input class="adicionarInfoComentario" type="text" placeholder="Adicione Especialidade">
@@ -591,7 +605,9 @@
             </div>
         </form>
     </main>
+    <!-- Rodapé padrão-->
     <footer id="footerGeral">
+        <!-- Separação de informações do Rodapé padrão -->
         <div class="containerFooter">
             <div>
                 <img id="logoFooter" src="/_Imagens/_Logo/logo.png" alt="logoEmpresa">
@@ -611,6 +627,5 @@
             <p class="footerDireitaParagrafos">© 2024 CONECTA MEDICO</p>
         </div>
     </footer>
-    
 </body>
 </html>

@@ -90,7 +90,7 @@
                 background-size: cover;
             }
 
-            #containerSection1Home
+            #containerSection1Geral
             {
                 position: absolute;
                 width: 100%;
@@ -333,10 +333,11 @@
     </style>
 </head>
 <body>
+    <!-- Cabeçalho padrão-->
     <header id="cabecalho">        
         <img id="logo" src="/_Imagens/_Logo/logo.png"> 
-        <label id="nmSite"> CONECTA MÉDICO</label>  
-        
+        <h1 id="nmSite"> CONECTA MÉDICO</h1>  
+        <!-- Navegador do Site-->
         <nav id="navegador">
             <div id="btnMobile">
             </div>
@@ -346,27 +347,34 @@
                 <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADATRAR</li></a>
                 <a class="fade-out" href="agendamentos.html" target="_self"><li class="itensHeader">AGENDAMENTO</li></a>
                 <a class="fade-out" href="comentarios.html" target="_self"><li class="itensHeader">COMENTÁRIOS</li></a>
-                <a class="fade-out" href="faleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
+                <a class="fade-out" href="FaleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
             </ul>
         </nav>
-
+        <!-- Futuramente irá conter imagem do usuário logado-->
         <div id="imgLogado">
-        </div>    
-        
+        </div>        
     </header>
+    <!-- Sessão 1 para página principal -->
     <section id="secao1Geral">
-        <div id="containerSection1Home">
-            
+        <!-- Imagem de Fundo da Sessão 1-->
+        <div id="containerSection1Geral">            
         </div>
+        <!-- Textos Principais da sessão 1-->
             <div id="secao1Containers" class="secao1Containers">
                 <h1 id="h1ConsultarTexto1">LOCALIZE SEU MÉDICO</h1>                
             </div>
     </section>
+    <!-- Informações principais -->
     <main id="principalConsultar">
-        <div id="filtroMain">            
+        <!-- Formulário de filtragem de informações genéricas -->
+        <form action="" id="filtroMain">  
+            <!-- Opções de Filtragem -->          
+                <!-- Filtro 1 -->
                 <div class="containerFiltroConsultar">
-                    <h5>Especialidade</h5>
-                    <form action="" id="formFiltro">
+                    <!-- descreve opção -->
+                    <label>Especialidade</label>
+                    <div id="formFiltro">
+                        <!-- Imagem lateral ilustrando opção -->
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/estetoscopio.png" alt="estetoscópio">
                         <select class="filtros" id="especialidade" name="especialidades">
                             <option value="cardiologista">Cardiologista</option>
@@ -374,11 +382,14 @@
                             <option value="dermatologia">Dermatologia</option>
                             <option value="dastroenterologia">Gastroenterologia</option>
                         </select>
-                    </form>                    
+                    </div>                    
                 </div>
+                <!-- Filtro 2 -->
                 <div class="containerFiltroConsultar">
-                    <h5>Localidade</h5>
-                    <form action="" id="formFiltro">
+                    <!-- descreve opção -->
+                    <label>Localidade</label>
+                    <div id="formFiltro">
+                        <!-- Imagem lateral ilustrando opção -->
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/localizacao.png" alt="estetoscópio">
                         <select class="filtros" id="localidade" name="localidade">
                             <option value="Acre">Acre (AC)</option>
@@ -409,11 +420,14 @@
                             <option value="Sergipe">Sergipe (SE)</option>
                             <option value="Tocantins">Tocantins (TO)</option>"
                         </select>
-                    </form>                    
+                    </div>                    
                 </div>
+                <!-- Filtro 3 -->
                 <div class="containerFiltroConsultar">
-                    <h5>Convênio</h5>
-                    <form action="" id="formFiltro">
+                    <!-- descreve opção -->
+                    <label>Convênio</label>
+                    <div id="formFiltro">
+                        <!-- Imagem lateral ilustrando opção -->
                         <img class="imgFiltro" height="10px" src="/_Imagens/_Filtros/predio-do-hospital.png" alt="estetoscópio">
                         <select class="filtros" id="convenio" name="convenio">
                             <option value="cardiologista">Unimed</option>
@@ -421,11 +435,16 @@
                             <option value="dermatologia">Bradesco</option>
                             <option value="dastroenterologia">Sul América</option>
                         </select>
-                    </form>                    
+                    </div>                    
                 </div>
-        </div>
+        </form>
+
+        <!-- Exibe as informações de acordo com o que foi aplicado nos filtros de busca OBS: as informações devem aoarecer de forma assíncrona  -->
+        <!-- Container limitador de espaço Geral-->
         <div id="resultadoBuscaMain">
+            <!-- Container limitador de espaço de informação específica -->
             <div class="resBuscaContainer">
+                <!-- Informções publicas sobre médico -->
                 <div class="imagemMedico padraoResEspaco">
                     <img src="/_Imagens/_MedicosBusca/medico-e-enfermeiras-em-equipamentos-especiais_23-2148980721.png" alt="imagem do Médico">
                 </div>
@@ -437,7 +456,10 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis et, exercitationem beatae dignissimos natus ut iusto perspiciatis suscipit quo provident! Tenetur quasi vel voluptas natus. Illum modi veritatis natus.
                 </div>
             </div>
+            
+            <!-- Container limitador de espaço de informação específica -->
             <div class="resBuscaContainer">
+                <!-- Informções publicas sobre médico -->
                 <div class="imagemMedico padraoResEspaco">
                     <img src="/_Imagens/_MedicosBusca/medico-e-enfermeiras-em-equipamentos-especiais_23-2148980721.png" alt="imagem do Médico">
                 </div>
@@ -449,7 +471,10 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis et, exercitationem beatae dignissimos natus ut iusto perspiciatis suscipit quo provident! Tenetur quasi vel voluptas natus. Illum modi veritatis natus.
                 </div>
             </div>
+
+            <!-- Container limitador de espaço de informação específica -->
             <div class="resBuscaContainer">
+                <!-- Informções publicas sobre médico -->
                 <div class="imagemMedico padraoResEspaco">
                     <img src="/_Imagens/_MedicosBusca/medico-e-enfermeiras-em-equipamentos-especiais_23-2148980721.png" alt="imagem do Médico">
                 </div>
@@ -461,7 +486,10 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis et, exercitationem beatae dignissimos natus ut iusto perspiciatis suscipit quo provident! Tenetur quasi vel voluptas natus. Illum modi veritatis natus.
                 </div>
             </div>
+
+            <!-- Container limitador de espaço de informação específica -->
             <div class="resBuscaContainer">
+                <!-- Informções publicas sobre médico -->
                 <div class="imagemMedico padraoResEspaco">
                     <img src="/_Imagens/_MedicosBusca/medico-e-enfermeiras-em-equipamentos-especiais_23-2148980721.png" alt="imagem do Médico">
                 </div>
@@ -475,7 +503,9 @@
             </div>
         </div>
     </main>
+    <!-- Rodapé padrão-->
     <footer id="footerGeral">
+        <!-- Separação de informações do Rodapé padrão -->
         <div class="containerFooter">
             <div>
                 <img id="logoFooter" src="/_Imagens/_Logo/logo.png" alt="logoEmpresa">
@@ -494,7 +524,6 @@
             <p class="footerDireitaParagrafos">Política de Privacidade</p>
             <p class="footerDireitaParagrafos">© 2024 CONECTA MEDICO</p>
         </div>
-    </footer>
-    
+    </footer>    
 </body>
 </html>

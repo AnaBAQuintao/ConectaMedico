@@ -89,7 +89,7 @@
                 background-size: cover;
             }
 
-            #containerSection1Home
+            #containerSection1Geral
             {
                 position: absolute;
                 width: 100%;
@@ -177,7 +177,7 @@
                 color: white;
             }
             #textoTamanhoDinamico
-            {
+            {                
                 width: 100%;
                 max-width: 100%;
                 min-width: 100%;
@@ -185,6 +185,7 @@
                 max-height: 150px;
                 min-height: max-content;
             }
+
             #separador
             {
                 width: 100%;
@@ -328,10 +329,11 @@
     </style>
 </head>
 <body>
+    <!-- Cabeçalho padrão-->
     <header id="cabecalho">        
         <img id="logo" src="/_Imagens/_Logo/logo.png"> 
-        <label id="nmSite"> CONECTA MÉDICO</label>  
-        
+        <h1 id="nmSite"> CONECTA MÉDICO</h1>  
+        <!-- Navegador do Site-->
         <nav id="navegador">
             <div id="btnMobile">
             </div>
@@ -341,34 +343,56 @@
                 <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADATRAR</li></a>
                 <a class="fade-out" href="agendamentos.html" target="_self"><li class="itensHeader">AGENDAMENTO</li></a>
                 <a class="fade-out" href="comentarios.html" target="_self"><li class="itensHeader">COMENTÁRIOS</li></a>
-                <a class="fade-out" href="faleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
+                <a class="fade-out" href="FaleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
             </ul>
         </nav>
-
+        <!-- Futuramente irá conter imagem do usuário logado-->
         <div id="imgLogado">
-        </div>    
-        
+        </div>        
     </header>
+    <!-- Sessão 1 para página principal -->
     <section id="secao1Geral">
-        <div id="containerSection1Home">            
+        <!-- Imagem de Fundo da Sessão 1-->
+        <div id="containerSection1Geral">            
         </div>
-            <div id="secao1Containers" class="secao1Containers">
-                <h1 id="h1ConsultarTexto1">FALE CONOSCO</h1>                
-            </div>
+        <!-- Textos Principais da sessão 1-->
+        <div id="secao1Containers" class="secao1Containers">
+            <h1 id="h1ConsultarTexto1">FALE CONOSCO</h1>                
+        </div>
     </section>
+    <!-- Informações principais -->
     <main id="mainFaleConosco">
+        <!-- Fale conosco (Envio de mensagem por parte do usuário relacioada aos serviços)-->
         <form id="adicionaComentario">
-            <hr id="separador">
             <h2>Tema/Assunto que deseja notificar</h2>
             <input class="adicionarInfoComentario" type="text" placeholder="Assunto">
-            <textarea class="adicionarInfoComentario" id="textoTamanhoDinamico"></textarea>
+            <textarea class="adicionarInfoComentario" id="textoTamanhoDinamico" placeholder="Menssagem..."></textarea>
+
+            <!--Caixa com botões de enviar e limpar-->
             <div class="btnEnviarLimpar">
                 <input class="btnPadrao" type="submit" value="Adicionar">
                 <input class="btnPadrao" type="reset" value="limpar">
-            </div>            
+            </div>  
+            <!-- Separador Visual de sessão -->
+            <hr id="separador">          
         </form>
+
+        <!-- Caixa de informações com dúvidas mais buscadas pelos usuários -->
         <div id="duvidasfrequentes">
+            <!-- Início Apresentando o nome da região-->
             <h2 class="textoPrincipal">DÚVIDAS FREQUENTES</h2>
+
+            <!-- Separação em caixas das informações, aplicando flex box-->
+            <div class="containerDuvidasFrequentes">
+                <H3 class="textoTema">Como Faço meu Cadastro</H3>
+                <p  class="textoAssunto">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Tempore asperiores modi consequuntur, autem blanditiis nulla,
+                    iste numquam doloremque impedit ipsam quos eveniet soluta!
+                    Sint quia accusamus saepe animi itaque incidunt!</p>                                        
+            </div>
+            <!-- Separador de sessões de informações buscads com frequencia-->
+            <hr class="separador">
+
             <div class="containerDuvidasFrequentes">
                 <H3 class="textoTema">Como Faço meu Cadastro</H3>
                 <p  class="textoAssunto">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -376,7 +400,10 @@
                     iste numquam doloremque impedit ipsam quos eveniet soluta! Sint quia accusamus saepe animi itaque incidunt!</p>
                     
             </div>
+
+            <!-- Separador de sessões de informações buscads com frequencia-->
             <hr class="separador">
+
             <div class="containerDuvidasFrequentes">
                 <H3 class="textoTema">Como Faço meu Cadastro</H3>
                 <p  class="textoAssunto">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -384,7 +411,10 @@
                     iste numquam doloremque impedit ipsam quos eveniet soluta! Sint quia accusamus saepe animi itaque incidunt!</p>
                     
             </div>
+
+            <!-- Separador de sessões de informações buscads com frequencia-->
             <hr class="separador">
+
             <div class="containerDuvidasFrequentes">
                 <H3 class="textoTema">Como Faço meu Cadastro</H3>
                 <p  class="textoAssunto">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -392,18 +422,15 @@
                     iste numquam doloremque impedit ipsam quos eveniet soluta! Sint quia accusamus saepe animi itaque incidunt!</p>
                     
             </div>
+
+            <!-- Separador de sessões de informações buscads com frequencia-->
             <hr class="separador">
-            <div class="containerDuvidasFrequentes">
-                <H3 class="textoTema">Como Faço meu Cadastro</H3>
-                <p  class="textoAssunto">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Tempore asperiores modi consequuntur, autem blanditiis nulla,
-                    iste numquam doloremque impedit ipsam quos eveniet soluta! Sint quia accusamus saepe animi itaque incidunt!</p>
-                    
-            </div>
-            <hr class="separador">
+
         </div>
     </main>
+    <!-- Rodapé padrão-->
     <footer id="footerGeral">
+        <!-- Separação de informações do Rodapé padrão -->
         <div class="containerFooter">
             <div>
                 <img id="logoFooter" src="/_Imagens/_Logo/logo.png" alt="logoEmpresa">
@@ -422,6 +449,6 @@
             <p class="footerDireitaParagrafos">Política de Privacidade</p>
             <p class="footerDireitaParagrafos">© 2024 CONECTA MEDICO</p>
         </div>
-    </footer>    
+    </footer>
 </body>
 </html>

@@ -89,7 +89,7 @@
                 background-size: cover;
             }
 
-            #containerSection1Home
+            #containerSection1Geral
             {
                 position: absolute;
                 width: 100%;
@@ -301,10 +301,11 @@
     </style>
 </head>
 <body>
+    <!-- Cabeçalho padrão-->
     <header id="cabecalho">        
         <img id="logo" src="/_Imagens/_Logo/logo.png"> 
-        <label id="nmSite"> CONECTA MÉDICO</label>  
-        
+        <h1 id="nmSite"> CONECTA MÉDICO</h1>  
+        <!-- Navegador do Site-->
         <nav id="navegador">
             <div id="btnMobile">
             </div>
@@ -314,21 +315,24 @@
                 <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADATRAR</li></a>
                 <a class="fade-out" href="agendamentos.html" target="_self"><li class="itensHeader">AGENDAMENTO</li></a>
                 <a class="fade-out" href="comentarios.html" target="_self"><li class="itensHeader">COMENTÁRIOS</li></a>
-                <a class="fade-out" href="faleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
+                <a class="fade-out" href="FaleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
             </ul>
         </nav>
-
+        <!-- Futuramente irá conter imagem do usuário logado-->
         <div id="imgLogado">
-        </div>    
-        
+        </div>        
     </header>
+    <!-- Sessão 1 para página principal -->
     <section id="secao1Geral">
-        <div id="containerSection1Home">            
+        <!-- Imagem de Fundo da Sessão 1-->
+        <div id="containerSection1Geral">            
         </div>
+        <!-- Textos Principais da sessão 1-->
             <div id="secao1Containers" class="secao1Containers">
                 <h1 id="h1ConsultarTexto1">AGENDAMENTOS</h1>                
             </div>
     </section>
+    <!-- Informações principais -->
     <main id="mainAgendamento">
         <form id="containerAgendamento">
             <div id="tituloEAgendamentos">
@@ -337,7 +341,7 @@
             </div>
 
             <label class="padraoAgendamento">Especialidade:</label>
-            <div  class="preenchimentoMaior" action="">
+            <div  class="preenchimentoMaior">
                 <select class="sectionPreenchimento" name="Sexo">
                     <option value=""></option>
                     <option value="">Fenino</option>
@@ -380,7 +384,9 @@
             
         </form>
     </main>
+    <!-- Rodapé padrão-->
     <footer id="footerGeral">
+        <!-- Separação de informações do Rodapé padrão -->
         <div class="containerFooter">
             <div>
                 <img id="logoFooter" src="/_Imagens/_Logo/logo.png" alt="logoEmpresa">
@@ -399,6 +405,6 @@
             <p class="footerDireitaParagrafos">Política de Privacidade</p>
             <p class="footerDireitaParagrafos">© 2024 CONECTA MEDICO</p>
         </div>
-    </footer>    
+    </footer>
 </body>
 </html>
