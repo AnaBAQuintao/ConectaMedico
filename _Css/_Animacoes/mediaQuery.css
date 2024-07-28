@@ -1,0 +1,183 @@
+/************* Media Query *********************/
+        @media(max-width: 1200px)
+        {
+            /*******  header ************/
+                #cabecalho
+                {
+                    position: fixed;
+                    transform: translateY(-70px);
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    height: max-content;
+                    gap: 15px;
+                    padding-bottom: 2px;
+                    z-index: 1000;
+                }
+                #secao1Home
+                {
+                    margin-top: 70px;
+                    height: max-content;
+                }
+
+                #containerSection1Geral
+                {
+                    opacity: 0;
+                }
+                
+                #textoDescitivoHome 
+                {
+                    padding-bottom: 15px;
+                }
+                #padaoFormularioSessao1
+                {
+                    max-width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                }
+                #h2Secao2Container2
+                {
+                    margin-right: 0px;
+                }
+                #logo
+                {
+                    position: absolute;
+                    margin-right: 80%;                    
+                    height: 80%;
+                    width: 10%;
+                }
+                #imgLogado
+                {
+                    position: absolute;
+                    margin-left: 80%;                    
+                    height: 80%;
+                    width: 10%;
+                    border-radius: 50%;
+                    background-color: aquamarine;
+                }
+                /*Efeitos de btn*/
+                            #btnMobile
+                            {
+                                display: flex;
+                                position: relative;
+                                flex-direction: column;
+                                justify-content: center;
+                                width: 30px;
+                                height: 30px;
+                                background-color: #156669;
+                                border-radius: 5px;
+                            }
+
+                            #btnMobile:hover
+                            {
+                                cursor: pointer;
+                            }
+
+                            #lnCentro
+                            {
+                                transition: 1s;
+                            }
+                            #lnCentro::after, #lnCentro::before
+                            {
+                                opacity: 1;
+                                transition: 3s;
+                            }
+
+                            .active#btnMobile #lnCentro
+                            {
+                                background-color: #156669;
+                            }
+
+                            .active#btnMobile #lnCentro::after
+                            {                
+                                content: '';
+                                opacity: 1;
+                                margin: 0px;
+                                margin-top: -15px;
+                                background-color: rgb(11, 11, 0);
+                                border-radius: 5px;      
+                                transform: translateY(15px) rotate(45deg);         
+                            }
+
+                            .active#btnMobile #lnCentro::before
+                            {                
+                                content: '';
+                                opacity: 1;
+                                margin: 0px;
+                                margin-top: 9px; 
+                                border-radius: 5px;
+                                transform: translateY(-9px) rotate(-45deg); 
+                            }
+                /********************************/
+                #listaHeader
+                {
+                    display: flex;
+                    background-color: #156669;
+                    text-align: center;
+                    position: absolute;
+                    flex-direction: column;
+                    list-style: none;
+                    margin : 10px;
+                    max-height: 250px;
+                    border: none;
+                    transform: translate(-50% ,-150%);
+                    z-index: 40;
+                    overflow-y: scroll;
+                    transition: 2s;
+                }
+
+                .active#navegador #listaHeader
+                {
+                    transform: translate(-50% , 8%)
+                }
+
+                #listaHeader::-webkit-scrollbar 
+                {
+                    width: 12px; /* Largura da scrollbar */
+                    height: 25%; /* Altura da scrollbar (para scroll horizontal) */
+                    border-radius: 25px;
+                }
+
+                #listaHeader::-webkit-scrollbar-track 
+                {
+                    background:#53c89b;/* Cor do track da scrollbar */
+                    border-radius: 15px;
+                }
+                #listaHeader::-webkit-scrollbar-thumb
+                {
+                    background: #11263d;
+                    border-radius: 15px;
+                }
+                #listaHeader::-webkit-scrollbar-thumb:hover
+                {
+                    border: 1px solid white;
+                }
+            /*********************************/
+            /******** Section *****************/
+                #containerSection1Geral
+                {
+                    justify-content: center;
+                    align-items: center;
+                }
+            /**********************************/
+            /******** footer ******************/
+                #footerGeral
+                {
+                    flex-direction: column;
+                    text-align: center;
+                    height: max-content;
+                    gap: 10px;
+                    /*background-color: #53c89b;*/
+                }
+                #logoFooter
+                {
+                    position: absolute;
+                    height: max-content;
+                }  
+                #footerDireita
+                {
+                    display: flex;
+                    align-items: center;
+                }
+            /************************************/
+        }

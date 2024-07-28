@@ -1,0 +1,139 @@
+ /*******************  main  **************************/
+ #mainFaleConosco
+ {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color: #11263d;
+     margin: 0 auto;
+     width: 100%;
+     max-width: 1400px;
+     min-width: 300px;
+     height: max-content;
+ }
+
+ #adicionaComentario
+ {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;                
+     align-items: start;
+     color: aliceblue;
+     width: 95%;
+     max-width: 1000px;
+     min-width: 250px;
+     height: max-content;
+     margin-bottom: 20px;     
+     gap: 20px;
+ }
+ .adicionarInfoComentario
+ {
+     width: 96%;
+     background-color: #156669;
+     color:#f3f4f5;
+     border-radius: 25px;
+     font-size: 20px;
+     height: 30px;
+     padding-left: 15px;
+     
+ }
+ .adicionarInfoComentario::placeholder
+ {
+     margin-left: 15px;
+     color: white;
+ }
+ #textoTamanhoDinamico
+ {                
+     width: 96%;
+     max-width: 96%;
+     min-width: 96%;     
+     height: 150px;
+     max-height: 150px;
+     min-height: max-content;
+ }
+
+ #separador
+ {
+     width: 100%;
+ }
+ .btnEnviarLimpar
+ {
+     display: flex;
+     margin: 20px 0px; 
+     justify-content: center;
+     align-items: center;
+     width: 100%;   
+     gap: 15px;      
+     transition: .2;                      
+ }
+ .btnPadrao
+ {
+     width: 100%;
+     max-width: 170px;
+     min-width: max-content;
+     height: 30px;
+     border-radius: 25px;
+     background-color: #53c89b;
+     color: white;    
+     text-transform: uppercase;                            
+ }
+
+ .btnPadrao:hover
+ {
+     cursor: pointer;
+     transform: scale(1.2);
+ }
+
+
+ #duvidasfrequentes
+ {
+     display: flex;
+     margin: 0 auto;
+     width: 100%;
+     max-width: 1000px;
+     min-width: 300px;
+     height: 700px;
+     margin: 25px 0px;
+     flex-direction: column;
+     flex-wrap: wrap;                
+     justify-content: start;
+     align-items: start;
+     /*background-color: #325880; /*visualiza espaço no main*/
+     color: white;                
+     gap: 20px;   
+ }
+
+ .containerDuvidasFrequentes
+ {
+     width: 100%;
+ }
+
+ .textoPrincipal
+ {
+     font-size: 40px;
+ }
+
+ .textoTema
+ {
+     margin-top: 15px;
+     font-size: 30px;
+ }
+
+ .textoAssunto
+ {
+     font-size: 20px;
+     margin: 5px 0px 15px 5px;
+     width: 100%;
+     max-width: 50%; /* Largura máxima para limitar o número de caracteres */
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+
+ .separador
+ {
+     width: 50%;
+ }
+
+/*****************************************************/

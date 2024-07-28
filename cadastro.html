@@ -4,291 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/_Imagens/_Logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="_Css/_Cadastro/_header.css">
+    <link rel="stylesheet" href="_Css/_Cadastro/_section.css">
+    <link rel="stylesheet" href="_Css/_Cadastro/_main.css">
+    <link rel="stylesheet" href="_Css/_Cadastro/_footer.css">
+    <link rel="stylesheet" href="_Css/_Animacoes/mediaQuery5.css">
+    <script src="_Scripts/_ativacaoBtn.js" defer></script>
     <title>Conecta Médico</title>
     <style>
         /*********************Header*/
             *{
                 margin: 0px;
-                padding: 0px;
-                
-            }
-
-            #cabecalho
-            {
-                display: flex;
-                flex-direction: row;
-                margin: 0 auto;
-                width: 100%;
-                max-width: 1400px;
-                min-width: 300px;
-                height: 75px;
-                background-color: #156669;
-                justify-content: space-around;
-                align-items: center;
-            }
-
-            #logo
-            {
-                height: 75px;
-            }
-
-            #listaHeader
-            {
-                display: flex;
-                list-style: none;
-                margin : 10px;
-            }
-
-            .itensHeader
-            {
-                margin: 10px;
-                padding: 08px 15px;
-                background-color: #11263d;
-                color: white;
-                border-radius: 15px;
-                transition: .4s;
-            }
-            .itensHeader:hover
-            {
-                transdiv: scale(1.2);
-                background-color: #53c89b;
-                cursor: pointer;
-            }
-            #imgLogado
-            {
-                height: 50%;
-                width: 35px;
-                border-radius: 50%;
-                background-color: aquamarine;
-            }
-
-            #nmSite
-            {
-                color: white;
-                font-size: 20px;
-            }
-
-            #btnMobile
-            {
-                display: none;
-            }
-        /**************************************************/
-        /*****************section 1 Home******************/                
-            #secao1Geral
-            {   
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                align-items: center;
-                width: 100%;
-                max-width: 1400px;
-                min-width: 300px;
-                height: 410px;
-                margin: 0 auto;
-                background-image: url(_Imagens/_Section1Home/Home.png) ;
-                background-size: cover;
-            }
-
-            #containerSection1Geral
-            {
-                position: absolute;
-                width: 100%;
-                max-width: 1400px;
-                min-width: 300px;
-                height: 410px;
-                background-color: rgba(25,25,25);
-                opacity: .3;
-                z-index: 25;            
-            }
-
-            .secao1Containers
-            {
-                display: flex;
-                flex-direction: column;          
-                align-items: start;
-                margin: 0 auto;
-                width: 100%;
-                height: 100%;
-                /*background-color: rgb(111, 114, 117);*/
-                /*border: 1px black solid; Sessão2 container */
-                z-index: 26;
-            }
-
-            #secao1Containers
-            {
-                text-align: left;
-            }
-
-            #h1ConsultarTexto1
-            {
-                padding-top: 60px;
-                margin-left: 50px;
-                text-align: left;
-                width: 95%;
-                position: relative;
-                font-size: 45px;
-                color: white;
-                z-index: 26;
-            }
-       
-        /*****************************************************/
-        /*******************  main  **************************/
-            #mainCadastro
-            {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #11263d;
-                margin: 0 auto;
-                width: 100%;
-                max-width: 1400px;
-                min-width: 300px;
-                height: max-content;
-            }
-            #containerCadastro
-            {
-                display: flex;
-                margin: 0 auto;
-                width: 100%;
-                max-width: 1300px;
-                min-width: 300px;
-                height: max-content;
-                margin: 25px 0px;
-                flex-direction: column;
-                flex-wrap: wrap;                
-                justify-content: center;
-                align-items: start;
-                /*background-color: #020c17; visualiza espaço no main*/                
-                gap: 20px;
-            }
-
-            .padraoCadastro
-            {
-                text-align: start;
-                font-size: 20px;
-                color: white;
-                margin-top: auto;
-            }
-
-            .preenchimentoMaior
-            {
-                width: 100%;
-                max-width: 1300px;
-                min-width: 300px;
-                height: 30px;
-                border-radius: 25px;                
-            }
-            .multiPreenchimento
-            {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: wrap;
-                width: 100%;
-                height: 40px;
-                margin-bottom: 10px;
-            }
-
-            .preenchimentoMenor
-            {
-                width: 45%;
-                height: 30px;
-                border-radius: 25px;
-
-            }
-            .preenchimentoMenorTexto
-            {
-                width: 45% ;
-            }
-            .sectionPreenchimento
-            {
-                width: 100%;
-                height: 30px;
-                border-radius: 25px;
-            }
-            .btnEnviarLimpar
-            {
-                display: flex;
-                margin: 20px 0px;
-                justify-content: center;
-                align-items: center;
-                width: 100%;   
-                gap: 15px;      
-                transition: .2;       
-            }
-            .btnPadrao
-            {
-                width: 150px;
-                height: 30px;
-                border-radius: 25px;
-                background-color: #53c89b;
-                color: white;    
-                text-transdiv: uppercase;                            
-            }
-
-            .btnPadrao:hover
-            {
-                cursor: pointer;
-                transdiv: scale(1.2);
-            }
-        /*****************************************************/
-        /******************* Footer **************************/
-            #footerGeral
-            {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin: 0 auto;
-                width: 100%;
-                max-width: 1400px;
-                min-width: 300px;
-                height: 140px;
-                background-color:#156669
-            }
-            .containerFooter
-            {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row;
-                margin: 0 auto;
-                width: 100%;
-                height: 100%;
-                /*background-color: #53c89b;*/
-            }
-            #logoFooter
-            {
-                height: 90%;
+                padding: 0px;                
             }       
-            
-            .textFooter
-            {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 95%;
-                color: white;
-            }
 
-            #footerCentro
-            {
-                display: flex;
-                justify-items: center;
-                text-align: center;
-            }
-
-            #footerDireita
-            {
-                display: flex;
-                align-items: end;
-            }
-
-            .footerDireitaParagrafos
-            {
-                margin-right: 15px
-            }
-    /******************************************/
+     
     </style>
 </head>
 <body>
@@ -298,16 +28,18 @@
         <h1 id="nmSite"> CONECTA MÉDICO</h1>  
         <!-- Navegador do Site-->
         <nav id="navegador">
-            <div id="btnMobile">
-            </div>
             <ul id="listaHeader">
                 <a class="fade-out" href="index.html" target="_self"><li class="itensHeader">HOME</li></a>
                 <a class="fade-out" href="consultar.html" target="_self"><li class="itensHeader">CONSULTAR</li></a>
-                <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADATRAR</li></a>
+                <a class="fade-out" href="cadastro.html" target="_self"><li class="itensHeader">CADASTRAR</li></a>
                 <a class="fade-out" href="agendamentos.html" target="_self"><li class="itensHeader">AGENDAMENTO</li></a>
                 <a class="fade-out" href="comentarios.html" target="_self"><li class="itensHeader">COMENTÁRIOS</li></a>
                 <a class="fade-out" href="FaleConosco.html" target="_self"><li class="itensHeader">FALE CONOSCO</li></a>
             </ul>
+            
+            <div id="btnMobile">
+                <div id="lnCentro"></div>
+            </div>
         </nav>
         <!-- Futuramente irá conter imagem do usuário logado-->
         <div id="imgLogado">
