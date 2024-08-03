@@ -8,17 +8,17 @@ var navegador = document.getElementById("navegador");
         {
             btnMobile.classList.remove("desactive")
             btnMobile.classList.add("active")
+            // navegador
             navegador.classList.remove("desactive")
             navegador.classList.add("active")
-        }               
+        }
         else
         {
             btnMobile.classList.remove("active")
             btnMobile.classList.add("desactive")     
-
+            // navegador
             navegador.classList.remove("active")
             navegador.classList.add("desactive")  
         }
-
     }
     btnMobile.addEventListener('click', ActiveDesactive);

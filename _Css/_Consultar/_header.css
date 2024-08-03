@@ -41,6 +41,13 @@
     border-radius: 15px;
     transition: .4s;
 }
+
+.linkNav
+{
+    color: white;
+    text-decoration: none;
+}
+
 .itensHeader:hover
 {
     transform: scale(1.2);

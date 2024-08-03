@@ -68,13 +68,13 @@
     border-radius: 15px;
 }
 
-#resultadoBuscaMain::-webkit-scrollbar-thumb:hover
+#resultadoBuscaMain::-webkit-scrollbar-thumb
 {
     background: #11263d;
     border-radius: 15px;
     border: 1px solid white;
 }
-.filtros::-webkit-scrollbar-thumb:hover
+.filtros::-webkit-scrollbar-thumb
 {
     background:#11263d;
     border-radius: 15px;

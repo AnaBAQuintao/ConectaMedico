@@ -32,6 +32,12 @@
         margin : 10px;
     }
 
+    .linkNav
+    {
+        color: white;
+        text-decoration: none;
+    }
+    
     .itensHeader
     {
         margin: 10px;

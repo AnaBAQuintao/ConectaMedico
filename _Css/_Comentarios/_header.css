@@ -1,3 +1,8 @@
+/*********************Header*/
+*{
+    margin: 0px;
+    padding: 0px;                
+}
 #cabecalho 
 {
     display: flex;
@@ -32,6 +37,12 @@
     color: white;
     border-radius: 15px;
     transition: .4s;
+}
+
+.linkNav
+{
+    color: white;
+    text-decoration: none;
 }
 
 .itensHeader:hover 
