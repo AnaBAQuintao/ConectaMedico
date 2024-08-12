@@ -120,7 +120,7 @@ btnCadastros.addEventListener('click', () => {
                 }        
                 else
                 {   
-                    select.style.backgroundColor = "white"  
+                    input.style.backgroundColor = "rgba(144, 238, 144, 1)"
                     select.style.color = 'black'
                 }
                         
