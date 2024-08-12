@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="_Css/_Cadastro/_footer.css">
     <link rel="stylesheet" href="_Css/_Animacoes/mediaQuery5.css">
     <script src="_Scripts/_ativacaoBtn.js" defer></script>
+    <script src="_Scripts/_Validadores/cadastros.js" defer></script>
     <title>Conecta Médico</title>
     <style>
         /*********************Header*/
@@ -62,13 +63,13 @@
             <h2 class="padraoCadastro">Cadastre-se Aqui</h2>
 
             <label class="padraoCadastro">Nome Completo:</label>
-            <input class="preenchimentoMaior" type="text" name="nmCompleto" placeholder="EX:Igor Felipe F Santos">
+            <input class="preenchimentoMaior" type="text" name="Nome_Completo" placeholder="EX:Igor Felipe F Santos">
             <!-- Multipreenchimentos são áreas destinadas a contenção de multiplas informações -->
             <div class="multiPreenchimento">
                 <label class="padraoCadastro preenchimentoMenorTexto">Cpf:</label>
                 <label class="padraoCadastro preenchimentoMenorTexto">Data de Nascimento:</label>
                 <input class="preenchimentoMenor" type="text" name="cpf" placeholder="EX:000.000.000-00">                                           
-                <input class="preenchimentoMenor " type="datetime" name="dtaNacimento">
+                <input class="preenchimentoMenor " type="datetime" name="data_de_Nacimento">
             </div>
             <!-- Multipreenchimentos são áreas destinadas a contenção de multiplas informações -->
             <div class="multiPreenchimento">
@@ -78,26 +79,26 @@
                 <div  class="preenchimentoMenor" action="">
                     <select class="sectionPreenchimento" name="Sexo">
                         <option value=""></option>
-                        <option value="">Fenino</option>
-                        <option value="">Masculino</option>
-                        <option value="">Outros</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Outros">Outros</option>
                     </select>
                 </div>    
             </div>       
 
             <label class="padraoCadastro" >Endereço:</label>   
-            <input class="preenchimentoMaior" type="text" placeholder="Ex: Rua: x, Numero:y">      
+            <input class="preenchimentoMaior" type="text" name="endereco" placeholder="Ex: Rua: x, Numero:y">      
 
             <label class="padraoCadastro">Complemento</label>
-            <input class="preenchimentoMaior" type="text">
+            <input class="preenchimentoMaior" type="text" name="complemento">
 
             <!-- Multipreenchimentos são áreas destinadas a contenção de multiplas informações -->
             <div class="multiPreenchimento">
                 <label class="padraoCadastro preenchimentoMenorTexto">Estado</label>
                 <label class="padraoCadastro preenchimentoMenorTexto">Cidade</label>
-                <div  class="preenchimentoMenor" action="">
+                <div  class="preenchimentoMenor">
                     <select class="sectionPreenchimento" id="" name="localidade">
-                        <option value="Acre"></option>
+                        <option value=""></option>
                         <option value="Acre">Acre (AC)</option>
                         <option value="Alagoas">Alagoas (AL)</option>
                         <option value="Amapa">Amapá (AP)</option>
@@ -131,10 +132,10 @@
             </div>
 
             <label class="padraoCadastro">E-mail</label>
-            <input class="preenchimentoMaior" type="email" name="email" placeholder="Ex: teste@teste.com">
+            <input class="preenchimentoMaior" type="email" name="e-mail" placeholder="Ex: teste@teste.com">
             
             <div class="btnEnviarLimpar">
-                <input class="btnPadrao" type="submit" value="cadastrar">
+                <input class="btnPadrao" id="btnCadastros" type="button" value="cadastrar">
                 <input class="btnPadrao" type="reset" value="limpar">
             </div>            
         </form>

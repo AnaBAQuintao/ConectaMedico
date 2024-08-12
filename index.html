@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="_Css/_Home/main.css">
     <link rel="stylesheet" href="_Css/_Home/footer.css">
     <link rel="stylesheet" href="_Css/_Animacoes/mediaQuery.css">
+    <script src="_Scripts/_Validadores/login.js" defer></script>
 </head>
 <body>
     <!-- Cabeçalho padrão-->
@@ -50,14 +51,15 @@
             <!-- Login/cadastro sessão 1-->
             <div id="padaoFormularioSessao1" class="secao1Containers" >
                 <form id="loginSection1Home">
-                    <div class="listaCadastro1">
-                        <input class="loginUserPass" type="text" placeholder="USUÁRIO"  name="USUÁRIO">
+                    <div for="USUARIO" class="listaCadastro1">
+                        
+                        <input class="loginUserPass" type="text" placeholder="USUÁRIO"  name="USUARIO">
                     </div>
                     <div class="listaCadastro1">
                         <input class="loginUserPass" type="password" placeholder="SENHA" name="SENHA">
                     </div>
-                    <input type="submit" id="btnLogin" class="listaCadastro1" value="LOGIN">
-                    <input type="submit" id="btnSenha" class="listaCadastro1" value="CADASTRAR">
+                    <input type="button" id="btnLogin" class="listaCadastro1"  value="LOGIN">
+                    <input type="reset" id="btnSenha" class="listaCadastro1" value="CADASTRAR">
                 </form>
                 <h2 id="h2Secao2Container2">Como Funciona?</h2>
             </div>
