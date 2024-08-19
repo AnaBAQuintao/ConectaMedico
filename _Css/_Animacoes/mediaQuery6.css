@@ -19,7 +19,11 @@
                 {
                     margin-top: 70px;
                     height: 300px;
+<<<<<<< HEAD
                     width: 100vw;
+=======
+                    
+>>>>>>> Ana
                 }
 
                 #containerSection1Geral
@@ -155,6 +159,10 @@
                 }
             /**********************************/
             /******** Main ********************/
+                #mainAgendamento
+                {
+                    width: 100% !important;
+                }
                 #principalConsultar
                 {
                     padding: 15px auto;

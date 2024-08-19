@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="_Css/_Comentarios/_footer.css">
     <link rel="stylesheet" href="_Css/_Animacoes/mediaQuery4.css">
     <script src="_Scripts/_ativacaoBtn.js" defer></script>
-    <script src="_Scripts/_adicionandoComentarios.js" defer></script>
+    <script src="_Scripts/_adicionandoComentarios.js"  defer></script>
+    <script src="_Scripts/_Validadores/faleConosco.js" defer></script>
+    <script src="_Scripts/_Validadores/formularios.js" defer></script>
     <title>Conecta Médico</title>
 </head>
 <body>
@@ -191,9 +193,9 @@
         <form id="adicionaComentario">
             <hr id="separador">
             <h2>Adicionar Comentário (opção disponível apenas após a realização da consulta/exame)</h2>
-            <input class="adicionarInfoComentario" type="text" placeholder="Adicione Especialidade">
-            <input class="adicionarInfoComentario" type="text" placeholder="Adicione Nome do Médico">
-            <textarea class="adicionarInfoComentario" id="textoTamanhoDinamico"></textarea>
+            <input class="adicionarInfoComentario" name="especialidade" type="text" placeholder="Adicione Especialidade">
+            <input class="adicionarInfoComentario" name="nome" type="text" placeholder="Adicione Nome do Médico">
+            <textarea class="adicionarInfoComentario" name="comentario" id="textoTamanhoDinamico"></textarea>
             <div class="btnEnviarLimpar">
                 <input class="btnPadrao" type="button" value="Adicionar">
                 <input class="btnPadrao" type="reset" value="limpar">

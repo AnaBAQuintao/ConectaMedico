@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="_Css/_FaleConosco/main.css">
     <link rel="stylesheet" href="_Css/_FaleConosco/footer.css">
     <link rel="stylesheet" href="_Css/_Animacoes/mediaQuery2.css">
+    <script src="_Scripts/_ativacaoBtn.js" defer></script>
+    <script src="_Scripts/_Validadores/faleConosco.js" defer></script>
+    <script src="_Scripts/_Validadores/formularios.js" defer></script>
     <title>Conecta Médico</title>
 </head>
 <body>
@@ -49,8 +52,8 @@
         <!-- Fale conosco (Envio de mensagem por parte do usuário relacioada aos serviços)-->
         <form id="adicionaComentario">
             <h2>Tema/Assunto que deseja notificar</h2>
-            <input class="adicionarInfoComentario" type="text" placeholder="Assunto">
-            <textarea class="adicionarInfoComentario" id="textoTamanhoDinamico" placeholder="Menssagem..."></textarea>
+            <input class="adicionarInfoComentario" name="assunto" type="text" placeholder="Assunto">
+            <textarea class="adicionarInfoComentario" name="mensagem" id="textoTamanhoDinamico" placeholder="Menssagem..."></textarea>
 
             <!--Caixa com botões de enviar e limpar-->
             <div class="btnEnviarLimpar">
@@ -133,7 +136,6 @@
             <p class="footerDireitaParagrafos">Política de Privacidade</p>
             <p class="footerDireitaParagrafos">© 2024 CONECTA MEDICO</p>
         </div>
-    </footer>
-    <script src="_Scripts/_ativacaoBtn.js"></script>
+    </footer>    
 </body>
 </html>
