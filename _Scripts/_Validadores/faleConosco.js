@@ -13,6 +13,7 @@ titulo.addEventListener("input", (assuntoComentario) => {
             titulo.style.background = "green"
         } else {
             titulo.style.background = "red"
+            window.alert("Assunto é obrigatório");
         }
     }
     else
