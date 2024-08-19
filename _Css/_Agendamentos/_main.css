@@ -45,7 +45,7 @@
 
 .preenchimentoMaior
 {
-    width: 100%;
+    width: 99.3%;
     max-width: 1300px;
     min-width: 300px;
     height: 30px;
@@ -58,7 +58,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 99.3%;
     height: 40px;
     margin-bottom: 10px;
 }
@@ -90,7 +90,7 @@
     gap: 15px;      
     transition: .2;                      
 }
-.btnPadrao
+.btnPadrao,.btnPadraoEnvio
 {
     width: 100%;
     max-width: 170px;
@@ -103,9 +103,19 @@
     text-transform: uppercase;                            
 }
 
+.btnPadraoEnvio
+{
+    left: 10px;
+}
+
 .btnPadrao:hover
 {
     cursor: pointer;
     transform: scale(1.2);
+}
+.btnPadraoEnvio:hover
+{
+    cursor: pointer;
+    transform: scaleY(1.2);
 }
 /*****************************************************/

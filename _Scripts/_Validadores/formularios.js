@@ -1,6 +1,6 @@
 /*Cadastro */ 
 
-const btnValidacao = document.querySelector("#btnCadastros");
+const btnValidacao = document.querySelector(".btnPadrao");
 let inputs = document.querySelectorAll("input");
 let selects = document.querySelectorAll("select");
 
