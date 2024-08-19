@@ -95,6 +95,7 @@
     width: 100%;
     max-width: 170px;
     min-width: max-content;
+    text-align: center;
     height: 30px;
     border-radius: 25px;
     background-color: #53c89b;

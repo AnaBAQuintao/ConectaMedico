@@ -1,11 +1,11 @@
 /*Cadastro */ 
 
-const btnCadastros = document.querySelector("#btnCadastros");
-let inputsCadastros = document.querySelectorAll("input");
-let selectsCadastros = document.querySelectorAll("select");
+const btnValidacao = document.querySelector("#btnCadastros");
+let inputs = document.querySelectorAll("input");
+let selects = document.querySelectorAll("select");
 
-btnCadastros.addEventListener('click', () => {
-    let faltaPreencher = Object.values(inputsCadastros).some( item => item.value === "") || Object.values(selectsCadastros).some( item => item.value === "");
+btnValidacao.addEventListener('click', () => {
+    let faltaPreencher = Object.values(inputs).some( item => item.value === "") || Object.values(selects).some( item => item.value === "");
 
     let qtdPreenchidoIncorretamenteOuVazio = 0;    
     let nmItem = ""
@@ -13,9 +13,9 @@ btnCadastros.addEventListener('click', () => {
 
     // caso seja true indica que algum campo não foi preenchido
     if(faltaPreencher)
-        {
+    {
             // loop para validar campos vazios no input
-            inputsCadastros.forEach(function(input) { 
+            inputs.forEach(function(input) { 
                 
                 // verificação de igualdade estrita para validar campos vazios
                 if(input.value === "")
@@ -43,7 +43,7 @@ btnCadastros.addEventListener('click', () => {
                         else
                         {
                             nmItem += `Campo .: ${input.name.toLowerCase()}\n`;
-                            preenchimentosIncorretos += `Para preenchimento de Nome é necessário:\n1 .: No minimo três caracteres. Ex Ian\n2 .: Não pode conter numeros apenas caractéres. Ex de erro: igor123 | Ex correto: Igor Felipe\n3 .: Não é permitida a repetição de caracteres como(IIIIgor)`
+                            preenchimentosIncorretos += `Para preenchimento de Nome é necessário:\n1 .: No minimo três caracteres. Ex Ian\n2 .: Não pode conter numeros apenas caractéres. Ex de erro: igor123 | Ex correto: Igor Felipe\n3 .: Não é permitida a repetição de caracteres como(IIIIgor)\n==========================\n`
                             input.style.backgroundColor = "rgba(139,0,0,.8)"
                             input.style.color = "white";
                             qtdPreenchidoIncorretamenteOuVazio ++;
@@ -62,7 +62,7 @@ btnCadastros.addEventListener('click', () => {
                         else
                         {
                             nmItem += `Campo .: ${input.name.toLowerCase()}\n`;
-                            preenchimentosIncorretos += `Para preenchimento de Cpf é necessário:\n1 .: O preenchimento de no mínimo 11 caracteres. Ex 123.456.789-19\n2 .: Não pode conter 11 numeros repetidos.EX:111.111.111-11`
+                            preenchimentosIncorretos += `Para preenchimento de Cpf é necessário:\n1 .: O preenchimento de no mínimo 11 caracteres. Ex 123.456.789-19\n2 .: Não pode conter 11 numeros repetidos.EX:111.111.111-11\n==========================\n`
                             input.style.backgroundColor = "rgba(139,0,0,.8)"
                             input.style.color = "white";
                             qtdPreenchidoIncorretamenteOuVazio ++;
@@ -80,7 +80,7 @@ btnCadastros.addEventListener('click', () => {
                             else
                             {
                                 nmItem += `Campo .: ${input.name.toLowerCase()}\n`;
-                                preenchimentosIncorretos += `Para preenchimento de telefone é necessário:\n1 .: O preenchimento do ddd e seguir o formato(ddd) 99999-9999`
+                                preenchimentosIncorretos += `Para preenchimento de telefone é necessário:\n1 .: O preenchimento do ddd e seguir o formato(ddd) 99999-9999\n==========================\n`
                                 input.style.backgroundColor = "rgba(139,0,0,.8)"
                                 input.style.color = "white";
                                 qtdPreenchidoIncorretamenteOuVazio ++;
@@ -98,7 +98,7 @@ btnCadastros.addEventListener('click', () => {
                                 else
                                 {
                                     nmItem += `Campo .: ${input.name.toLowerCase()}\n`;
-                                    preenchimentosIncorretos += `Para preenchimento de email é necessário:\n1 .: Não pode começar/terminar com um ponto\n2 .: Ter domínio muito curto.EX: .c ao inves de .com\n3 .: Possuir dois pontos consecutivos em qualquer parte do endereço de e-mail`
+                                    preenchimentosIncorretos += `Para preenchimento de email é necessário:\n1 .: Não começar/terminar com um ponto\n2 .: Ter domínio muito curto.EX: .c ao inves de .com\n3 .: Possuir dois pontos consecutivos em qualquer parte do endereço de e-mail`
                                     input.style.backgroundColor = "rgba(139,0,0,.8)"
                                     input.style.color = "white";
                                     qtdPreenchidoIncorretamenteOuVazio ++;
@@ -109,7 +109,7 @@ btnCadastros.addEventListener('click', () => {
 
             })
             // loop para validar campos de selct vazios
-            selectsCadastros.forEach(function(select) { 
+            selects.forEach(function(select) { 
                 // verificação de igualdade estrita para validar campos vazios
                 if(select.value === "")
                 {
@@ -122,10 +122,9 @@ btnCadastros.addEventListener('click', () => {
                 {   
                     select.style.backgroundColor = "rgba(144, 238, 144, 1)";
                     select.style.color = 'black'
-                }
-                        
+                }                        
             })
             // exibe na tela que faltam preencher campos
-            alert(`Existem ${qtdPreenchidoIncorretamenteOuVazio} campos vazios que precisam ser preenchidos, são eles:\n==========================\n${nmItem}==========================\nPara realizar o cadastro é necessário realizar o preenchimento seguindo as regras abaixo!!!\n==========================\n ${preenchimentosIncorretos}`)                     
+            alert(`Existem ${qtdPreenchidoIncorretamenteOuVazio} campos vazios que precisam ser preenchidos, são eles:\n==========================\n${nmItem}==========================\n${(!preenchimentosIncorretos.includes("Para preenchimento de") ) ? '' : "Para realizar o cadastro é necessário realizar o preenchimento seguindo as regras abaixo!!!\n==========================\n" + preenchimentosIncorretos}`)                     
         }
 })

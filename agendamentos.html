@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="_Css/_Animacoes/mediaQuery6.css">
     <link rel="icon" href="/_Imagens/_Logo/logo.png" type="image/png">
     <script src="_Scripts/_ativacaoBtn.js" defer></script>
+    <script src="_Scripts/_Validadores/formularios.js" defer></script>
     <title>Conecta Médico</title>
     <style>
         /*********************Header*/
@@ -73,17 +74,17 @@
                 </select>
             </div>   
 
-            <label class="padraoAgendamento">Nome do Médico</label>
-            <input class="preenchimentoMaior" type="text">
+            <label class="padraoAgendamento" >Nome do Médico</label>
+            <input class="preenchimentoMaior" type="text" name="nome">
 
             <label class="padraoAgendamento" >Local:</label>   
-            <input class="preenchimentoMaior" type="text" placeholder="Ex: Rua: x, Numero:y">   
+            <input class="preenchimentoMaior" type="text" name="local" placeholder="Ex: Rua: x, Numero:y">   
 
             <div class="multiPreenchimento">
                 <label class="padraoAgendamento preenchimentoMenorTexto">Data:</label>
                 <label class="padraoAgendamento preenchimentoMenorTexto">Horario:</label>
                 <div  class="preenchimentoMenor" action="">
-                    <select class="sectionPreenchimento" name="Sexo">
+                    <select class="sectionPreenchimento" name="Data">
                         <option value=""></option>
                         <option value="">30/07/2024</option>
                         <option value="">30/07/2024</option>
@@ -91,7 +92,7 @@
                     </select>
                 </div>                                             
                 <div  class="preenchimentoMenor" action="">
-                    <select class="sectionPreenchimento" name="Sexo">
+                    <select class="sectionPreenchimento" name="Hoarios">
                         <option value=""></option>
                         <option value="">13:00</option>
                         <option value="">13:30</option>
@@ -101,7 +102,7 @@
             </div>
                         
             <div class="btnEnviarLimpar">
-                <input class="btnPadrao" type="submit" value="cadastrar">
+                <input class="btnPadrao" type="button" id="btnCadastros" value="cadastrar">
                 <input class="btnPadrao" type="reset" value="limpar">
             </div>
             
