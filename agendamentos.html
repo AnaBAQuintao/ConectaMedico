@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="_Css/_Agendamentos/_header.css">
     <link rel="stylesheet" href="_Css/_Agendamentos/_section.css">
+    <link rel="stylesheet" href="_Css/_Agendamentos/_SectionModal.css">
     <link rel="stylesheet" href="_Css/_Agendamentos/_main.css">
     <link rel="stylesheet" href="_Css/_Agendamentos/_footer.css">
     <link rel="stylesheet" href="_Css/_Animacoes/mediaQuery6.css">
@@ -25,7 +26,7 @@
     
     <!-- Cabeçalho padrão-->
     <header id="cabecalho">        
-        <img id="logo" src="/_Imagens/_Logo/logo.png"> 
+        <img id="logo" src="/_Imagens/_Logo/logo.png" alt="logo"> 
         <h1 id="nmSite"> CONECTA MÉDICO</h1>  
         <!-- Navegador do Site-->
         <nav id="navegador">
@@ -61,16 +62,16 @@
         <form id="containerAgendamento">
             <div id="tituloEAgendamentos">
                 <h2 class="padraoAgendamento">Para realiza agendamentos é necessário possuir Agendamento</h2>
-                <input class="btnPadrao" type="submit" value="meus agendamentos">
+                <input class="btnPadraoEnvio" type="submit" value="meus agendamentos">
             </div>
 
             <label class="padraoAgendamento">Especialidade:</label>
             <div  class="preenchimentoMaior">
-                <select class="sectionPreenchimento" name="Sexo">
+                <select class="sectionPreenchimento" name="Especialidade">
                     <option value=""></option>
-                    <option value="">Fenino</option>
-                    <option value="">Masculino</option>
-                    <option value="">Outros</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Outros">Outros</option>
                 </select>
             </div>   
 
@@ -86,17 +87,17 @@
                 <div  class="preenchimentoMenor" action="">
                     <select class="sectionPreenchimento" name="Data">
                         <option value=""></option>
-                        <option value="">30/07/2024</option>
-                        <option value="">30/07/2024</option>
-                        <option value="">30/07/2024</option>
+                        <option value="30/07/2024">30/07/2024</option>
+                        <option value="30/07/2024">30/07/2024</option>
+                        <option value="30/07/2024">30/07/2024</option>
                     </select>
                 </div>                                             
                 <div  class="preenchimentoMenor" action="">
-                    <select class="sectionPreenchimento" name="Hoarios">
+                    <select class="sectionPreenchimento" name="Horarios">
                         <option value=""></option>
-                        <option value="">13:00</option>
-                        <option value="">13:30</option>
-                        <option value="">14:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
                     </select>
                 </div>   
             </div>

@@ -8,6 +8,12 @@ btnLogin.addEventListener('click', ()=>{
     let inputPass =  document.querySelectorAll(".loginUserPass")[1]
     const regexLogin = /^[a-zA-Z]+$/;
     const regexSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    // senhas aceitas 
+    /*Contém uma letra maiúscula (P).
+    Contém letras minúsculas (assword).
+    Contém um número (1).
+    Contém um caractere especial (!).
+    Tem 9 caracteres no total (mais do que o mínimo de 8).*/
 
     
     // Testando a expressão regular contra o nome de usuário
